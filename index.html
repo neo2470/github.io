@@ -3,11 +3,35 @@
 <head>
 <meta charset="utf-8">
 <title>周旭峰-项目展示</title>
+<script type="text/javascript">
+    function onload() {
+        if (is_pc()) {
+        } else {
+            var video = document.getElementById("player");
+            video.width = document.body.clientWidth;
+        }
+    }
+
+    function is_pc() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+</script>
 <style>
 </style>
 </head>
-<body>
-    <video width="360" height="640" controls autoplay>
+<body onload="onload();">
+    <video id="player" width="360" height="640" controls autoplay>
         <source src="resume/demo.mp4" type="video/mp4">
     </video>
 </body>
