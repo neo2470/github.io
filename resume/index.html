@@ -3,13 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>周旭峰-简历-C++开发工程师</title>
+<script type="text/javascript">
+    function onload() {
+        var reader = document.getElementById("reader");
+        reader.src = "../js/pdfjs/web/viewer.html?file=../../../resume/resume.pdf?v=" + Math.random();
+    }
+</script>
 <style>
     body {
         margin: 0px;
     }
 </style>
 </head>
-<body>
-    <iframe id="previewpdf" src="../js/pdfjs/web/viewer.html?file=../../../resume/resume.pdf#page=1" width="100%" height="1600" frameborder="0"></iframe>
+<body onload="onload();">
+    <iframe id="reader" width="100%" height="1600" frameborder="0"></iframe>
 </body>
 </html>
