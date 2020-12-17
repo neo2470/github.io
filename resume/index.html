@@ -5,8 +5,16 @@
 <title>周旭峰-简历-C++开发工程师</title>
 <script type="text/javascript">
     function onload() {
+        var type = window.location.search.substr(1);
+        var path = "cp";
+        if ("cc" === type) {
+            path = "cc";
+        } else if ("ad" === type) {
+            path = "ad";
+        }
+
         var reader = document.getElementById("reader");
-        reader.src = "../js/pdfjs/web/viewer.html?file=../../../resume/resume.pdf?v=" + Math.random();
+        reader.src = "../js/pdfjs/web/viewer.html?file=../../../resume/" + path + "/resume.pdf?v=" + Math.random();
     }
 </script>
 <style>
