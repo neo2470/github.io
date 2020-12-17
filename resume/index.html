@@ -6,11 +6,11 @@
 <script type="text/javascript">
     function onload() {
         var type = window.location.search.substr(1);
-        var path = "cp";
-        if ("cc" === type) {
-            path = "cc";
-        } else if ("ad" === type) {
-            path = "ad";
+        var path = "cpp";
+        if ("x" === type) {
+            path = "cocos2dx";
+        } else if ("a" === type) {
+            path = "android";
         }
 
         var reader = document.getElementById("reader");
